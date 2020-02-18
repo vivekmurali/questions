@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Questions</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Questions</h1>
+        </div>
+        <div class="form-text">
+            <form action="/" method="post" id="form-question">
+                <input type="text" name="question" placeholder="Please enter a question">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <ul class="question-display">
+            <% Questions.forEach(details => { %> 
+            <li class="question-item">
+                <div class="question-item-name"><%= details.content %></div>
+            </li>
+        <% }) %>
+        </ul>
+
+    </div>
+</body>
+</html>
