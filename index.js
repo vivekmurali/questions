@@ -23,6 +23,13 @@ app.get('/',(req,res)=>{
     
 });
 
+app.get('/vivek',(req,res)=>{
+    questions.find({},(err,question)=>{
+        res.render('answers.ejs',{Questions:question})
+    })
+})
+
+
 
 //BOILER PLATE
 app.set('view engine', 'ejs');
