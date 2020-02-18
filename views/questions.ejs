@@ -13,14 +13,15 @@
         </div>
         <div class="form-text">
             <form action="/" method="post" id="form-question">
-                <input type="text" name="question" placeholder="Please enter a question">
+                <input type="text" name="question" placeholder="Please enter a question"><br>
                 <button type="submit">Submit</button>
             </form>
         </div>
         <ul class="question-display">
             <% Questions.forEach(details => { %> 
             <li class="question-item">
-                <div class="question-item-name"><%= details.content %></div>
+                <div class="question-item-name">Question: <%= details.content %></div>
+                <div class="answer-item-name">Answer: <%= details.answer %></div>
             </li>
         <% }) %>
         </ul>

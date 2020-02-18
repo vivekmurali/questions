@@ -5,6 +5,24 @@
 }
 
 .container{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+}
+
+.title{
+    margin: 10px;
+    
+}
+
+.form-text input{
+    margin-bottom: 10px;
+}
+
+
+.question-display{
+    margin: 10px;
+}
+
+.question-display li{
+    margin: 5px;
+    list-style-type: none;
 }

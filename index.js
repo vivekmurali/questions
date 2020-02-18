@@ -42,7 +42,8 @@ mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true, useUnifiedTopol
 //POST METHOD
 app.post('/',async (req,res)=>{
     const Question = new questions({
-        content: req.body.question
+        content: req.body.question,
+        answer: ''
     });
 
     try{

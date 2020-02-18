@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 
 const questionSchema = new mongoose.Schema({
     content: {
-        type: 'string'
+        type: 'string',
+        required: true
+    },
+    answer:{
+        type: 'string',
+        default: ''
     },
     date: {
         type: Date,
