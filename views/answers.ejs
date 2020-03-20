@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <title>Answers</title>
 </head>
 <body>
     <ul class="question-list">
         <% Questions.forEach(details=>{ %>
         <li class="question-item">
-            <div class="question-item-name"><%=details.content%></div>
-            <form class="answer" action="" method="POST">
-                <input type="text" name="answer-text">
+            <div class="question-item-name">Question: <%=details.content%></div>
+            <div class="question-item-name">Answer: <%=details.answer%></div>
+            <a href="/remove/<%= details._id %>" class="remove"> <span class="fas fa-times"></span>
+            </a>
+        <% if(details.answer.length == 0) { %>
+            <form class="answer" action="/answer/<%= details._id %>" method="POST">
+                <input type="text" name="answertext">
                 <button type="submit">Submit</button>
             </form>
+        <%}%>
         </li>
     <% }) %>
     </ul>

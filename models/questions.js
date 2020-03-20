@@ -7,7 +7,7 @@ const questionSchema = new mongoose.Schema({
     },
     answer:{
         type: 'string',
-        default: ''
+        default: null
     },
     date: {
         type: Date,
